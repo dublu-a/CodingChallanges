@@ -1,6 +1,6 @@
 add_rules("mode.debug", "mode.release")
 add_requires("raylib")
-
+set_languages("c++20")
 
 target("smoketest")
     set_kind("binary")
@@ -11,5 +11,11 @@ target_end()
 target("starfield")
     set_kind("binary")
     add_files("src/0001.starfield/*.cpp")
+    add_packages("raylib")
+target_end()
+
+target("menger_sponge")
+    set_kind("binary")
+    add_files("src/0002.menger_sponge/*.cpp")
     add_packages("raylib")
 target_end()
